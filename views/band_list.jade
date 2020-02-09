@@ -6,3 +6,7 @@ block content
         -   for(var b in bandsList)
             li
                 a(href='/bands/'+bandsList[b])=bandsList[b]
+                &nbsp;
+                a(href='/edit/'+bandsList[b]) edit
+                &nbsp;
+                a(href='/del/'+bandsList[b]) delete

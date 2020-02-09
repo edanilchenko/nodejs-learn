@@ -1,0 +1,9 @@
+extends layout
+block content
+    div
+        form(action="/add/", method="post") Add group
+            br
+            input(type="text" name="band_name")
+            br
+            input(type="submit")
+    a(href='/bands/') Back

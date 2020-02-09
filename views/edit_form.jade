@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div
+        form(method='POST')
+            input(type='hidden' name='_method' value='put' action='?name='+name)
+            br
+            input(type='text' name='newName' value=name)
+            br
+            input(type='hidden' name='name' value=name)
+            br
+            input(type='submit')
+    a(href='/bands/') Back

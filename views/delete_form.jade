@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    div
+        form(method='POST') Delete group?
+            input(type="hidden" name='_method' value='delete' action='?name='+name)
+            br
+            input(type="text" name='band_name' value=name readonly='readonly')
+            br
+            input(type='submit')
+    a(href='/bands/') back
