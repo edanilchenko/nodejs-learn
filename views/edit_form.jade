@@ -2,12 +2,21 @@ extends layout
 
 block content
     div
-        form(method='POST')
-            input(type='hidden' name='_method' value='put' action='?name='+name)
+        form(method='POST' action='/edit/')
+            input(type='hidden' name='_method' value='put')
+            input(type='hidden' name='bid' value=band.bid)
             br
-            input(type='text' name='newName' value=name)
+            b Name
             br
-            input(type='hidden' name='name' value=name)
+            input(type='text' name='name' value=band.name)
+            br
+            b Country
+            br
+            input(type='text' name='state' value=band.state)
+            br
+            b Members
+            br
+            textarea(name='band_members')=members
             br
             input(type='submit')
     a(href='/bands/') Back

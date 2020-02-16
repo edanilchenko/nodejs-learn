@@ -3,7 +3,17 @@ block content
     div
         form(action="/add/", method="post") Add group
             br
+            b Name
+            br
             input(type="text" name="band_name")
+            br
+            b Country
+            br
+            input(type='text' name='band_state')
+            br
+            b Members
+            br
+            textarea(name="band_members")
             br
             input(type="submit")
     a(href='/bands/') Back

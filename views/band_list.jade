@@ -5,8 +5,8 @@ block content
     ul
         -   for(var b in bandsList)
             li
-                a(href='/bands/'+bandsList[b])=bandsList[b]
+                a(href='/bands/'+bandsList[b].bid)=bandsList[b].name
                 &nbsp;
-                a(href='/edit/'+bandsList[b]) edit
+                a(href='/edit/'+bandsList[b].bid) edit
                 &nbsp;
-                a(href='/del/'+bandsList[b]) delete
+                a(href='/del/'+bandsList[b].bid) delete

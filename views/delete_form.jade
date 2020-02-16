@@ -4,8 +4,9 @@ block content
     div
         form(method='POST') Delete group?
             input(type="hidden" name='_method' value='delete' action='?name='+name)
+            input(type="hidden" name='bid' value=band.bid)
             br
-            input(type="text" name='band_name' value=name readonly='readonly')
+            div #{band.name}?
             br
             input(type='submit')
-    a(href='/bands/') back
+    a(href='/bands/') Back
