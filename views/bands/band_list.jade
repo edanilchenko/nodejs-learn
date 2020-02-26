@@ -1,4 +1,4 @@
-extends layout
+extends ../layout
 
 block content
     h2= title
@@ -7,6 +7,7 @@ block content
             li
                 a(href='/bands/'+bandsList[b].bid)=bandsList[b].name
                 &nbsp;
-                a(href='/edit/'+bandsList[b].bid) edit
+                a(href='/bands/edit/'+bandsList[b].bid) edit
                 &nbsp;
-                a(href='/del/'+bandsList[b].bid) delete
+                a(href='/bands/del/'+bandsList[b].bid) delete
+    a(href='/bands/add') Add group

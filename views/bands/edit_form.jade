@@ -1,8 +1,8 @@
-extends layout
+extends ../layout
 
 block content
     div
-        form(method='POST' action='/edit/')
+        form(method='POST' action='/bands/edit/')
             input(type='hidden' name='_method' value='put')
             input(type='hidden' name='bid' value=band.bid)
             br
@@ -16,7 +16,7 @@ block content
             br
             b Members
             br
-            textarea(name='band_members')=members
+            textarea(name='members')=members
             br
             input(type='submit')
     a(href='/bands/') Back

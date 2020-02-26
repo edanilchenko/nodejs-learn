@@ -1,7 +1,7 @@
-extends layout
+extends ../layout
 block content
     div
-        form(action="/add/", method="post") Add group
+        form(action="/bands/add/", method="post") Add group
             br
             b Name
             br
@@ -13,7 +13,7 @@ block content
             br
             b Members
             br
-            textarea(name="band_members")
+            textarea(name="members")
             br
             input(type="submit")
     a(href='/bands/') Back
