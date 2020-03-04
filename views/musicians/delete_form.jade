@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    div
+        form(method='POST') Delete group?
+            input(type="hidden" name='_method' value='delete' action='?name='+name)
+            input(type="hidden" name='mid' value=musician.mid)
+            br
+            div #{musician.name}?
+            br
+            input(type='submit')
+    a(href='/musicians/') Back

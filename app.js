@@ -34,7 +34,7 @@ app.use(function(err, req, res, next){
     res.send(err.message);
 });
 
-var controllers = ['bands'];
+var controllers = ['bands', 'musicians'];
 controllers.forEach(function(controller){
     map.route(app, controller);
 });

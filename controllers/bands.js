@@ -13,7 +13,7 @@ exports.index = function(req, res){
 }
 
 exports.show = function(req, res){
-    var id = req.params.bid;
+    var id = req.params.id;
     BandModel.find({bid:id}, function(err, band){
         if(!err){
             res.render('bands/band', {title:'Bands', band: band[0]});
@@ -60,7 +60,7 @@ exports.create = function(req, res){
 }
 
 exports.deleteForm = function(req, res){
-    var id = req.params.bid;
+    var id = req.params.id;
     BandModel.find({bid:id}, function(err, band){
         if(!err){
             res.render('bands/delete_form', {band: band[0]});
@@ -84,7 +84,7 @@ exports.delete = function(req, res){
 }
 
 exports.editForm = function(req, res){
-    var bid = req.params.bid;
+    var bid = req.params.id;
     BandModel.find({bid:bid}, function(err, band){
         if(!err){
             var group = band[0];

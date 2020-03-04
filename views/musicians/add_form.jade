@@ -1,0 +1,15 @@
+extends ../layout
+block content
+    div
+        form(action="/musicians/add/", method="post") Add group
+            br
+            b Name
+            br
+            input(type="text" name="name")
+            br
+            b Bio
+            br
+            input(type='text' name='bio')
+            br
+            input(type="submit")
+    a(href='/musician/') Back

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    div
+        form(method='POST' action='/musician/edit/')
+            input(type='hidden' name='_method' value='put')
+            input(type='hidden' name='mid' value=musician.mid)
+            br
+            b Name
+            br
+            input(type='text' name='name' value=musician.name)
+            br
+            b Bio
+            br
+            input(type='text' name='bio' value=musician.bio)
+            br
+            input(type='submit')
+    a(href='/musician/') Back

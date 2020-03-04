@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+    h2= title
+    ul
+        -   for(var b in bandsList)
+            li
+                a(href='/musicians/'+bandsList[b].mid)=bandsList[b].name
+                &nbsp;
+                a(href='/musicians/edit/'+bandsList[b].mid) edit
+                &nbsp;
+                a(href='/musicians/del/'+bandsList[b].mid) delete
+    a(href='/musicians/add') Add musician
